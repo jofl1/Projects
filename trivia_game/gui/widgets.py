@@ -27,10 +27,10 @@ class TimerLabel(tk.Label):
 class OptionButton(ttk.Button):
     """A styled option button using ttk so background/foreground are obeyed."""
     def __init__(self, master=None, command=None, **kwargs):
-        # Ensure our styles exist (harmless to re-run multiple times)
+        # Ensure styles exist 
         style = ttk.Style(master)
 
-        # --- Default option style ---
+        # Default option style 
         style.configure(
             "Option.TButton",
             font=config.OPTION_FONT,
@@ -55,7 +55,6 @@ class OptionButton(ttk.Button):
             ],
         )
 
-        # --- Correct / Incorrect result styles ---
         style.configure(
             "Correct.TButton",
             font=config.OPTION_FONT,
